@@ -18,6 +18,7 @@ zombie *zombieEvent::randomChamp()
 	zombie *Zombie;
 
 	std::string names[] = {"Alina", "Zina", "Maria", "Olga", "Ira", "Izolda"};
+	srand(time(0));
 	Zombie = new zombie(names[(rand() % 6)],this->type);
 	return (Zombie);
 }
