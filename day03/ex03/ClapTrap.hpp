@@ -8,10 +8,11 @@ class ClapTrap
     ~ClapTrap();
     ClapTrap(std::string name);
     ClapTrap(ClapTrap const &Frag);
-    ClapTrap(std::string name, int armor, int energyPoints,
-    int hitPoints , int level, int maxEnergy,int maxHitPoints,
-    int meleeAttack, int rangedAttack);
+ClapTrap( int armor, int energyPoints,
+int hitPoints , int level, int maxEnergy,int maxHitPoints,
+int meleeAttack, int rangedAttack,std::string name) ;
     void                rangedAttack(std::string const & target);
+    int                 ranged(std::string const & target);
     void                meleeAttack(std::string const & target);
     void                takeDamage(unsigned int amount);
     void                beRepaired(unsigned int amount);

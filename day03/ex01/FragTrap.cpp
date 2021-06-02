@@ -2,11 +2,11 @@
 typedef void (FragTrap::*attacks)(const std::string &target);
 FragTrap::~FragTrap()
 {
-    std::cout << "The default destructor is called." << std::endl;
+    std::cout << "The (FragTrap) default destructor is called." << std::endl;
 }
 FragTrap::FragTrap()
 {
-    std::cout << "The default constructor is called." << std::endl;
+    std::cout << "The (FragTrap) default constructor is called." << std::endl;
     this->_armor = 5;
     this->_energyPoints = 100;
     this->_hitPoints = 100;
@@ -17,6 +17,13 @@ FragTrap::FragTrap()
     this->_name = "NoName";
     this->_rangedAttack = 20;
 }
+
+/*
+**==========================
+**    Operator overload
+**==========================
+*/
+
 FragTrap	&FragTrap::operator=(FragTrap const &Frag)
 {
 	if (this == &Frag)
@@ -35,7 +42,7 @@ FragTrap	&FragTrap::operator=(FragTrap const &Frag)
 }
 FragTrap::FragTrap(FragTrap const &Frag)
 {
-	 std::cout << "The copy constructor is called." << std::endl;
+	std::cout << "The (FragTrap) copy constructor is called." << std::endl;
 	this->_hitPoints = Frag._hitPoints;
 	this->_maxHitPoints = Frag._maxHitPoints;
 	this->_energyPoints = Frag._energyPoints;
@@ -50,7 +57,7 @@ FragTrap::FragTrap(FragTrap const &Frag)
 }
 FragTrap::FragTrap(std::string name)
 {
-    std::cout << "The constructor is called." << std::endl;
+    std::cout << "The (FragTrap) constructor is called." << std::endl;
     this->_armor = 5;
     this->_energyPoints = 100;
     this->_hitPoints = 100;

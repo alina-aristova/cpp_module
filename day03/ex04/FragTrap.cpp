@@ -19,12 +19,12 @@ FragTrap::~FragTrap()
 {
     std::cout << "The (FragTrap) default destructor is called." << std::endl;
 }
-FragTrap::FragTrap() : ClapTrap("NoName",100, 100, 100, 100, 1, 25, 25, 15) 
+FragTrap::FragTrap() : ClapTrap(100, 100, 100, 100, 1, 25, 25, 15,"NoName") 
 {
     std::cout << "The (FragTrap) default constructor is called." << std::endl;
 
 }
-FragTrap::FragTrap(std::string name) : ClapTrap(name,100, 100, 100, 100, 1, 25, 25, 15) 
+FragTrap::FragTrap(std::string name) : ClapTrap(100, 100, 100, 100, 1, 25, 25, 15,name) 
 {
     std::cout << "The (FragTrap) constructor is called." << std::endl;
 

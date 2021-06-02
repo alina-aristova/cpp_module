@@ -1,9 +1,26 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-
+#include "ClapTrap.hpp"
 int main()
 {
-    
+    std::cout << "============Test ClapTrap start============" << std::endl;
+    ClapTrap	Alina("Alina");
+    std::cout << std::endl;
+    Alina.meleeAttack("Oleg");
+    Alina.rangedAttack("Misha");
+    std::cout << std::endl;
+    Alina.takeDamage(10);
+    Alina.takeDamage(10);
+    Alina.takeDamage(10);
+    Alina.takeDamage(10);
+    Alina.takeDamage(90);
+    std::cout << std::endl;
+    Alina.beRepaired(10);
+    Alina.beRepaired(30);
+    Alina.beRepaired(30);
+    Alina.beRepaired(30);
+    std::cout << "============Test ClapTrap finish===========" << std::endl;
+    std::cout << std::endl;
     std::cout << "============Test FragTrap start============" << std::endl;
     FragTrap	Bob("Bob");
     std::cout << std::endl;

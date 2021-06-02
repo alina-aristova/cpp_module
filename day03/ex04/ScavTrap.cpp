@@ -19,11 +19,11 @@ ScavTrap::~ScavTrap()
 {
     std::cout << "The (ScavTrap) default destructor is called." << std::endl;
 }
-ScavTrap::ScavTrap() : ClapTrap("NoName",100, 100, 100, 100, 1, 25, 25, 15) 
+ScavTrap::ScavTrap() : ClapTrap(100, 100, 100, 100, 1, 25, 25, 15,"NoName") 
 {
     std::cout << "The (ScavTrap) default constructor is called." << std::endl;
 }
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name,100, 100, 100, 100, 1, 25, 25, 15) 
+ScavTrap::ScavTrap(std::string name) : ClapTrap(100, 100, 100, 100, 1, 25, 25, 15,name) 
 {
     std::cout << "The (ScavTrap) constructor is called." << std::endl;
 

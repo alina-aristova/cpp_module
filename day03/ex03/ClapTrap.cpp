@@ -62,9 +62,9 @@ ClapTrap::ClapTrap(std::string name)
     this->_name = name;
     this->_rangedAttack = 20;
 }
-ClapTrap::ClapTrap(std::string name, int armor, int energyPoints,
+ClapTrap::ClapTrap( int armor, int energyPoints,
 int hitPoints , int level, int maxEnergy,int maxHitPoints,
-int meleeAttack, int rangedAttack) 
+int meleeAttack, int rangedAttack,std::string name) 
 {
     this->_armor = armor;
     this->_energyPoints = energyPoints;
@@ -82,6 +82,12 @@ void ClapTrap::rangedAttack(std::string const & target)
 {
     std::cout << "FR4G-TP " << this->_name << " " << target << " at range, causing "
     << this->_rangedAttack << " points of damage!" << std::endl;
+}
+int ClapTrap::ranged(std::string const & target)
+{
+    std::cout << "FR4G-TP " << this->_name << " " << target << " at range, causing "
+    << this->_rangedAttack << " points of damage!" << std::endl;
+    return 0;
 }
 
 void ClapTrap::meleeAttack(std::string const & target)

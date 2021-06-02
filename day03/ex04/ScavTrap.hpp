@@ -9,11 +9,8 @@ class ScavTrap : public ClapTrap
     ~ScavTrap();
     ScavTrap(std::string name);
     ScavTrap(ScavTrap const &Scav);
-
     void        challengeNewcomer(std::string const &target);
     ScavTrap    &operator=(ScavTrap const &Frag);
 	private:
-
-    
 };
 #endif
